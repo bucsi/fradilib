@@ -1,14 +1,18 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h> //sleep, fork
+#include <sys/types.h> //fork, ftok
+#include <sys/ipc.h> //ftok
 
 #include <wait.h>
 #include <time.h>
+#include <signal.h>
 
-#include "cso.h"
-#include "szignal.h"
-#include "uzenet.h"
-#include "szemafor.h"
-#include "osztmem.h"
+#include "fradilib/cso.h"
+#include "fradilib/szignal.h"
+#include "fradilib/uzenet.h"
+#include "fradilib/szemafor.h"
+#include "fradilib/osztmem.h"
 
 
 
