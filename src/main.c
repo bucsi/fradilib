@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
         printf("%d: Be szeretnék menni\n", getpid());
         
         // signal a boltosnak, hogy készen áll
-        kill(getppid(), SIGUSR1);
+        szignalkuldes(getppid(), SIGUSR1);
 
         // beengedi őket a boltos?
         cso_olvas(v1cso, buffer);
@@ -100,7 +100,7 @@ int main(int argc, char* argv[]){
             printf("%d: Én is bemennék\n", getpid());
             
             // signal a boltosnak, hogy készen áll
-            kill(getppid(), SIGUSR1);
+            szignalkuldes(getppid(), SIGUSR1);
 
             // beengedi őket a boltos?
             cso_olvas(v2cso, buffer);
@@ -149,8 +149,8 @@ int main(int argc, char* argv[]){
             printf("%d: A második vevő ezt szeretné megvenni: %s\n", getpid(), s);
 
             //visszajelzés: 0-1-2 darab könyv van hátra
-            kill(vasarlo1, SIGRTMIN + rand()%2);
-            kill(vasarlo2, SIGRTMIN + rand()%2);
+            szignalkuldes(vasarlo1, SIGRTMIN + rand()%2);
+            szignalkuldes(vasarlo2, SIGRTMIN + rand()%2);
         }
     }
 

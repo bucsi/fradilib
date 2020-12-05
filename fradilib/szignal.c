@@ -4,8 +4,19 @@
 
 #include "szignal.h"
 
+// Ez a függvény a leginkábbb "haszontalan" a gyűjteményben, de volt már problémám a paraméterek sorrendjének elfelejtésével, a dokumentációs komment remélhetőleg segít.
+int szignalkuldes(pid_t kinek, int mit){
+    return kill(kinek, mit);
+}
+
 void handler(int sign){
     printf("%d folyamat %d jelzést kapott.\n",getpid(), sign);
+}
+
+int numberSignal(int signal){
+    signal = signal - SIGRTMIN;
+    printf("%d folyamat jelzésen keresztül ezt a számot kapta: %d", getpid(), signal);
+    return signal;
 }
 
 void numOverSignal(int signal){
