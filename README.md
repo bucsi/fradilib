@@ -5,8 +5,9 @@
 Segéd-headerek az ELTE IK operációs rendszerek tárgyához.
 
 **FIGYELEM!**
+A projekt fejlesztés alatt áll, bármikor készülhet dokumentálatlan, visszafelé nem kompatibilis módosítás. Ha ezzel készülsz valamelyik számonkérésre, érdemes egy lokális másolatot használni.
 
-A tárgy előadójának tájékoztatása szerint mivel a projekt nyílt forráskódú, és az interneten elérhető, plágiumgyanú nélkül használható a számonkéréseken.
+A tárgy előadójának tájékoztatása szerint mivel a projekt nyílt forráskódú, és az interneten szabadon elérhető, plágiumgyanú nélkül használható a számonkéréseken.
 
 ## to do
 - [ ] Memory leak a `cso_letrehoz` miatt
