@@ -6,7 +6,7 @@ Segéd-headerek az ELTE IK operációs rendszerek tárgyához.
 
 **FIGYELEM!**
 
-A projekt fejlesztés alatt áll, csak a verziókövetés és az egyszerűbb fejlesztés miatt publikus a repo. Jelenleg nem tisztázott, hogy egy számonkérésen plágiumnak számít-e, ezért a fradilib használata **nem javasolt!**
+A tárgy előadójának tájékoztatása szerint mivel a projekt nyílt forráskódú, és az interneten elérhető, plágiumgyanú nélkül használható a számonkéréseken.
 
 ## to do
 - [ ] Memory leak a `cso_letrehoz` miatt
