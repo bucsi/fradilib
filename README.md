@@ -1,6 +1,5 @@
 
-![FradiLib](header.png)
-# `fradilib`
+# ![FradiLib](header.png)
 
 Segéd-headerek az ELTE IK operációs rendszerek tárgyához.
 
