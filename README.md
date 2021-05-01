@@ -1,5 +1,6 @@
 
-# ![FradiLib](header.png)
+![FradiLib](header.png)
+# `fradilib`
 
 Segéd-headerek az ELTE IK operációs rendszerek tárgyához.
 
@@ -67,4 +68,7 @@ SUMMARY: AddressSanitizer: 16 byte(s) leaked in 2 allocation(s).```
 
 - [ ] Színes kimenet a `coloredoutput.c`-vel
 - [ ] Dokumentáció
+- [ ] String műveletek (`=`, `==`, `+`) lehetőségének vizsgálata és implementálása
+- [ ] Csővezetéknél `void*` típusú adatok esetén wrapperek helyett hasznos segédfüggvények
+- [ ] Csővezetéknél `string` esetén biztonságosabb és rugalmasabb méret-kezelés
 - [ ] További ZH-k megoldása mintaként
