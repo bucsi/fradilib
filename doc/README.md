@@ -32,3 +32,10 @@ pid_t gyerek = fork()
 ...
 szignalkuldes(gyerek, SIGRTMIN+3); //3-mat küld a gyereknek jelzésen keresztül
 ```
+
+## Cső
+> Jelenleg fejlesztés alatt!
+
+A `csobe_string` és `csobol_string` függvények használata ajánlott, ha a feladat vagy algoritmus nem igényel mást. Életszerű maximum méretig (1024 byte) tetszőleges hosszú szövegekre működik.
+
+A `csobe_adat` és `csobol_adat` függvények egyelőre csak wrapperek a `read()` és `write()` köré, hogy ne kelljen emlékezni a szükséges paraméterek sorrendjére, hasonlóan a [`szignalkuldes` függvényhez](#szignalkuldespid_t-kinek-int-mit).
