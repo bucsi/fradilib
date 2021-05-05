@@ -5,13 +5,11 @@
 #define cso_ir csobe_string
 #define cso_olvas csobol_string
 
-typedef int *cso;
-
 /**
  * Létrehoz egy csővezetéket.
  * @returns A csővezeték leírója, int* - egy 2 hosszú tömb.
  */
-cso *cso_letrehoz();
+int *cso_letrehoz();
 
 /**
  * Üzenet küldése egy csővezetéken keresztül
@@ -19,7 +17,7 @@ cso *cso_letrehoz();
  * @param message az üzenet karaktertömbként - nincs limitáció a méretére,
  * óvatosan!
  */
-void csobe_string(cso descriptor, const char *message);
+void csobe_string(int descriptor[2], const char *message);
 
 /**
  * Tetszőleges adat írása egy csővezetékbe
@@ -27,14 +25,14 @@ void csobe_string(cso descriptor, const char *message);
  * @param data az írandó adatra mutató pointer
  * @param memsize az írandó adat mérete byteokban (sizeof eredménye)
  */
-void csobe_adat(cso descriptor, const void *data, size_t memsize);
+void csobe_adat(int descriptor[2], const void *data, size_t memsize);
 
 /**
  * Üzenet fogadása egy csővezetékből
  * @param descriptor a csővezeték leírója (int[2])
  * @param buffer az üzenet fogadására szolgáló buffer (char[100])
  */
-void csobol_string(cso descriptor, char buffer[1024]);
+void csobol_string(int descriptor[2], char buffer[1024]);
 
 /**
  * Tetszőleges adat olvasása egy csővezetékből
@@ -42,12 +40,12 @@ void csobol_string(cso descriptor, char buffer[1024]);
  * @param data ide fogja olvasni az adatokat
  * @param memsize maximum enyni byte-ot olvas (sizeof eredménye)
  */
-void csobol_adat(cso descriptor, void *data, size_t memsize);
+void csobol_adat(int descriptor[2], void *data, size_t memsize);
 
 /**
  * Egy csővezeték törlése
  * @param descriptor a csővezeték leírója (int[2])
  */
-void cso_torol(cso descriptor);
+void cso_torol(int descriptor[2]);
 
 #endif

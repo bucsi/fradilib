@@ -5,8 +5,8 @@
 
 #include "cso.h"
 
-cso *cso_letrehoz() {
-    int *uj_cso = (int *)malloc(2 * sizeof(int));
+int *cso_letrehoz() {
+    int uj_cso = (int *)malloc(2 * sizeof(int));
     if (pipe(uj_cso) == -1) {
         printf("Hiba a csovezetek letrehozaskor\n");
         exit(EXIT_FAILURE);
@@ -14,19 +14,21 @@ cso *cso_letrehoz() {
     return uj_cso;
 }
 
-void csobe_string(cso descriptor, const char *message) {
+void csobe_string(int descriptor[2], const char *message) {
     write(descriptor[1], message, strlen(message) + 1);
 }
 
-void csobe_adat(cso descriptor, const void *data, size_t memsize) {
+void csobe_adat(int descriptor[2], const void *data, size_t memsize) {
     write(descriptor[1], data, memsize);
 }
 
-void csobol_string(cso descriptor, char *buffer) { read(descriptor[0], buffer, 1024); }
+void csobol_string(int descriptor[2], char *buffer) { read(descriptor[0], buffer, 1024); }
 
-void csobol_adat(cso descriptor, void *data, size_t memsize) { read(descriptor[0], data, memsize); }
+void csobol_adat(int descriptor[2], void *data, size_t memsize) {
+    read(descriptor[0], data, memsize);
+}
 
-void cso_torol(cso descriptor) {
+void cso_torol(int descriptor[2]) {
     free(descriptor);
     descriptor = NULL;
 }
