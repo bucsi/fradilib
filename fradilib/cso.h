@@ -39,7 +39,7 @@ void csobol_string(int descriptor[2], char buffer[1024]);
  * @param data ide fogja olvasni az adatokat
  * @param memsize maximum enyni byte-ot olvas (sizeof eredménye)
  */
-void csobol_adat(int descriptor[2], const void *data, size_t memsize);
+void csobol_adat(int descriptor[2], void *data, size_t memsize);
 
 /**
  * Egy csővezeték törlése

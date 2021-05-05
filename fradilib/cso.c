@@ -22,11 +22,9 @@ void csobe_adat(int descriptor[2], const void *data, size_t memsize) {
     write(descriptor[1], data, memsize);
 }
 
-void csobol_string(int descriptor[2], char *buffer) {
-    read(descriptor[0], buffer, 1024);
-}
+void csobol_string(int descriptor[2], char *buffer) { read(descriptor[0], buffer, 1024); }
 
-void csobol_adat(int descriptor[2], const void *data, size_t memsize) {
+void csobol_adat(int descriptor[2], void *data, size_t memsize) {
     read(descriptor[0], data, memsize);
 }
 
