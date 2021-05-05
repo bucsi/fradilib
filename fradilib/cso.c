@@ -5,8 +5,6 @@
 
 #include "cso.h"
 
-typedef int *cso;
-
 cso *cso_letrehoz() {
     int *uj_cso = (int *)malloc(2 * sizeof(int));
     if (pipe(uj_cso) == -1) {
