@@ -6,7 +6,7 @@
 #include "cso.h"
 
 int *cso_letrehoz() {
-    int uj_cso = (int *)malloc(2 * sizeof(int));
+    int *uj_cso = (int *)malloc(2 * sizeof(int));
     if (pipe(uj_cso) == -1) {
         printf("Hiba a csovezetek letrehozaskor\n");
         exit(EXIT_FAILURE);
