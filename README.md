@@ -1,8 +1,11 @@
 
-![FradiLib](header.png)
+![FradiLib](doc/header.png)
 # `fradilib`
 
 Segéd-headerek az ELTE IK operációs rendszerek tárgyához.
+
+## solutions mappa
+Két ZH megoldása megtalálható a solutions mappában, használati példaként
 
 **FIGYELEM!**
 A projekt fejlesztés alatt áll, bármikor készülhet dokumentálatlan, visszafelé nem kompatibilis módosítás. Ha ezzel készülsz valamelyik számonkérésre, érdemes egy lokális másolatot használni.
