@@ -10,7 +10,7 @@ int szignalkuldes(pid_t kinek, int mit) { return kill(kinek, mit); }
 
 void handler(int sign) { printf("%d folyamat %d jelzést kapott.\n", getpid(), sign); }
 
-void numberSignal(int signal) {
+int numberSignal(int signal) {
     signal = signal - SIGRTMIN;
     printf("%d folyamat jelzésen keresztül ezt a számot kapta: %d", getpid(), signal);
     return signal;

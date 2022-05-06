@@ -20,7 +20,7 @@ void handler(int sign);
  * Szám fogadása signalon keresztül. Az érkező számot kiírja a konzolra, valamint
  * @returns a signalon érkező szám
  */
-void numberSignal(int signal);
+int numberSignal(int signal);
 
 /**
  * Egyszerű példa a signalokkal való információ-közvetítésre.
