@@ -1,8 +1,8 @@
 #ifndef VELETLEN_H
 #define VELETLEN_H
 
-/**Előállít egy véletlen egész számot két határérték között.
- * CSAK LINUX 3.17, VAGY ÚJABB KERNELEN MŰKÖDIK!
+/**
+ * Előállít egy véletlen egész számot két határérték között.
  * @param also az alsó határ (inkluzív)
  * @param felso a felső határ (exkluzív)
  */
